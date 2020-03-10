@@ -1,0 +1,325 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+
+
+@media screen and (min-width: 1000px) {
+
+
+    /********* HOME PAGE *********/
+
+    @keyframes appear {
+        from {opacity: 0;}
+        to {opacity: 100%;}
+    }
+
+    @keyframes insert {
+        from {transform: translateY(-100px);}
+        to {transform: translateY(0px);}
+    }
+
+    .letter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        
+        animation: appear 2.5s forwards ease-in-out;
+    }
+    
+    #namech {
+        position: absolute;
+        height: 21%;
+        top: 4%;
+        left: 2.5%;
+    }
+    
+    #nameen {
+        position: absolute;
+        height: 21%;
+        bottom: -1px;
+        right: -1px;
+    }
+    
+    .card  {
+        cursor: pointer;
+        position: absolute;
+        min-width: fit-content;
+        min-height: 350px;
+        height: 450px;
+        left: 50%;
+        top: 40%;
+        margin-left: -120px;
+        margin-top: -200px;
+
+    }
+    
+    .card img {
+        height: 100%;
+        animation: insert ease-in-out 1s;
+    }
+    
+    #c0 {
+        display: none;
+    }
+
+    #c1 {
+        box-shadow: rgba(0, 0, 0, 0.4) 10px -10px 20px 0px;
+        transform: rotate(-20deg) translateX(-300px);
+        z-index: 0;
+        border-radius: 15px;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    #c1:hover {
+        transform: rotate(-12deg) translate(-370px,-20px);
+        transition: all 0.4s ease-in-out;
+    }
+    
+    #c1:active {
+        transform: rotate(-12deg) translate(-370px,10px);
+        transition: all 0.1s ease-in-out;
+    }
+    
+    #c2 {
+        box-shadow: rgba(0, 0, 0, 0.4) 10px -10px 20px 0px;
+        transform: rotate(-10deg) translateX(-150px);
+        z-index: 1;
+        border-radius: 15px;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    #c2:hover {
+        transform: rotate(-4deg) translate(-210px, -10px);
+        transition: all 0.4s ease-in-out;
+    }
+    
+    #c2:active {
+        transform: rotate(-4deg) translate(-210px, 20px);
+        transition: all 0.1s ease-in-out;
+    }
+    
+    
+    #c3 {
+        box-shadow: rgba(0, 0, 0, 0.4) 10px -10px 20px 0px;
+        z-index: 2;
+        border-radius: 15px;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    #c3:hover {
+        transform: translate(0, -45px);
+        transition: all 0.4s ease-in-out;
+    }
+    
+    #c3:active {
+        transform: translate(0, -10px);
+        transition: all 0.1s ease-in-out;
+    }
+    
+    #c4 {
+        box-shadow: rgba(0, 0, 0, 0.4) 10px -10px 20px 0px;
+        transform: rotate(10deg) translateX(150px);
+        z-index: 1;
+        border-radius: 15px;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    #c4:hover {
+        transform: rotate(4deg) translate(210px, -10px);
+        transition: all 0.4s ease-in-out;
+    }
+    
+    #c4:active {
+        transform: rotate(4deg) translate(210px, 20px);
+        transition: all 0.1s ease-in-out;
+    }
+    
+    #c5 {
+        box-shadow: rgba(0, 0, 0, 0.4) 10px -10px 20px 0px;
+        transform: rotate(20deg) translateX(300px);
+        z-index: 0;
+        border-radius: 15px;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    #c5:hover {
+        transform: rotate(12deg) translate(370px,-20px);
+        transition: all 0.4s ease-in-out;
+    }
+    
+    #c5:active {
+        transform: rotate(12deg) translate(370px,10px);
+        transition: all 0.1s ease-in-out;
+    }
+    
+
+    /********* MAIN CONTENT *********/
+
+
+    .frame {
+        height: 100%;
+        width: 100%;
+    }
+    
+    iframe {
+        height: 100%;
+        width: 100%;
+    }
+    
+    #return {
+        position: absolute;
+        width: 5%;
+        min-width: 40px;
+        max-width: 70px;
+        top:185%;
+        left:90%;
+        border-radius: 100px;
+    
+        transition: all 0.7s ease-in-out;
+    }
+    
+    #return:hover {
+        box-shadow: rgba(255, 255, 255, 0.9) 0px 0px 60px;
+    
+        transition: all 0.3s ease-in-out;
+    }
+    
+    #return:active {
+        box-shadow: rgba(0, 0, 0, 0.8) 0px 0px 20px;
+        
+        transition: all 0.1s ease-in-out;
+    }
+
+}
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1000px) {
+
+
+    /********* HOME PAGE *********/
+
+    @keyframes appear {
+        from {opacity: 0;}
+        to {opacity: 100%;}
+    }
+
+    @keyframes insert {
+        from {transform: translateX(-1500px);}
+        to {transform: translateX(0px);}
+    }
+
+    body {
+        width: 100%;
+        scroll-snap-type: y mandatory;
+    }
+
+    .area img {
+        scroll-snap-align: center;
+    }
+
+    iframe {
+        scroll-snap-align: center;
+    }
+
+    .letter {
+        width: 100%;
+        height: 100%;
+        white-space: nowrap;
+        overflow-y: hidden;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+
+        animation: appear 2s forwards ease-in-out;
+    }
+    
+    #namech {
+        display: none;
+    }
+    
+    #nameen {
+        display: none;
+    }
+    
+    .card  {
+        display: inline-block;
+        position: relative;
+        height: 75%;
+        margin: 2%;
+    }
+    
+    .card img {
+        height: 100%;
+        scroll-snap-align: center;
+        margin: 25% auto 10% auto;
+
+        animation: insert ease-in-out 3s;
+    }
+    
+    #c0 {
+        margin-left: 21%;
+    }
+
+    #c5 {
+        margin-right: 21%;
+    }
+
+
+    /********* MAIN CONTENT *********/
+
+
+    .frame {
+        height: 100%;
+        width: 100%;
+    }
+    
+    iframe {
+        height: 100%;
+        width: 100%;
+    }
+    
+    @keyframes shine {
+        0% {box-shadow: rgba(255, 255, 255, 0.8) 0px 0px 50px;}
+        50% {box-shadow: rgba(255, 255, 255, 0) 0px 0px 30px 20px;}
+        100% {box-shadow: rgba(255, 255, 255, 0.8) 0px 0px 50px;}
+    }
+
+    #return {
+        position: absolute;
+        width: 5%;
+        min-width: 55px;
+        max-width: 100px;
+        top:185%;
+        left:75%;
+        border-radius: 100px;
+
+        animation: shine 3s ease-in-out infinite;
+        transition: all 0.7s ease-in-out;
+    }
+    
+    #return:hover {
+        box-shadow: rgba(0, 0, 0, 0.8) 0px 0px 20px;
+        
+        transition: all 0.1s ease-in-out;
+    }
+    
+}

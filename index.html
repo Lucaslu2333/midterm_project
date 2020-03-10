@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Letter · 信</title>
+    <link rel="stylesheet" href="style.css">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+
+
+        $(document).ready(function(){
+          // Add smooth scrolling to all links
+          $("a").on('click', function(event) {
+        
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+              // Prevent default anchor click behavior
+              event.preventDefault();
+        
+              // Store hash
+              var hash = this.hash;
+        
+              // Using jQuery's animate() method to add smooth page scroll
+              // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+              $('html, body').animate({
+                scrollTop: $(hash).offset().top
+              }, 1000, function(){
+           
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              });
+            } // End if
+          });
+        });
+    </script>
+
+</head>
+
+<body>
+    
+    <div id="letters" class="letter" class="area">
+        <img id="namech" src="b1.png" alt="Zijian Lu in Chinese">
+        <img id="nameen" src="b2.png" alt="Zijian Lu in English">
+        <div class="card" id="c0">
+            <img src="i0.png" alt="my name is Zijian Lu">
+        </div>
+        <div class="card" id="c3">
+            <a href="#iframe"><img onclick="c3()" src="i3.png" alt="about me"></a>
+        </div>
+        <div class="card" id="c2">
+            <a href="#iframe"><img onclick="c2()" src="i2.png" alt="animation"></a>
+        </div>
+        <div class="card" id="c4">
+            <a href="#iframe"><img onclick="c4()" src="i4.png" alt="installation art"></a>
+        </div>
+        <div class="card" id="c1">
+            <a href="#iframe"><img onclick="c1()" src="i1.png" alt="coding"></a>
+        </div>
+        <div class="card" id="c5">
+            <a href="#iframe"><img onclick="c5()" src="i5.png" alt="future"></a>
+        </div>
+    </div>
+
+    <div class="frame">
+        <iframe id="iframe" src="about/index.html" frameborder="0"></iframe>
+        <a href="#letters"><img id="return" src="return.png" alt="return button"></a>
+    </div>
+    
+
+    <script>
+
+        function c1(){
+            iframe.src = "coding/index.html"
+        }
+        function c2(){
+            iframe.src = "animation/index.html"
+        }
+        function c3(){
+            iframe.src = "about/index.html"
+        }
+        function c4(){
+            iframe.src = "installation/index.html"
+        }
+        function c5(){
+            iframe.src = "future/index.html"
+        }
+        
+    </script>
+
+
+</body>
+</html>

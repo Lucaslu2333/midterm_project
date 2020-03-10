@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Hind+Madurai:300,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--didsplay on BIG screen--> 
+    <div class="installation">
+
+        <div class="fbutton">
+            <img onclick="increase(); appear();" class="button" src="installation.png" alt="letter of installation">
+        </div>
+    
+        <p id="attach1">
+            In this work, I am responding to Nicky Case’s work We Become What We Behold. One element that interests me in his work is the “hashtag.”
+            <br> <br>
+            The hashtag, as a common symbol in our lives, could represent a producing process of enlarging and spreading individuals’ opinions into a public sentiment via social media. This process is happening every day and everywhere, but most of the time we could only see it happens rather than actually influence it. Meanwhile, we are also contributing to the final outcome even though we are most of the time merely as a viewer.
+            <br> <br>
+            With this inspiration, I came up with the idea of Hashtag Factory. In this model, the audience could actually see and experience how the hashtag receives social media’s individuals’ responses and produces a final outcome – the public sentiment. The audience could witness this process through a tiny viewfinder and a mini-telescope, and the scene is very close to the audience since it is happening everywhere. But the audience could not get access to the inner space, that they cannot make any changes to it.
+        </p>
+    
+        <div id="attach2">
+            <img src="ani1.png">
+            <img src="ani2.png">
+            <img src="box.png">
+        </div>
+    
+    </div>
+
+    <!--didsplay on SMALL screen--> 
+    <div class="minstallation">
+
+        <div class="fbutton">
+            <img onclick="increase(); appear();" class="button" src="installation.png" alt="letter of installation">
+        </div>
+    
+        <p id="attach3">
+            In this work, I am responding to Nicky Case’s work We Become What We Behold. One element that interests me in his work is the “hashtag.”
+            <br> <br>
+            The hashtag, as a common symbol in our lives, could represent a producing process of enlarging and spreading individuals’ opinions into a public sentiment via social media. This process is happening every day and everywhere, but most of the time we could only see it happens rather than actually influence it. Meanwhile, we are also contributing to the final outcome even though we are most of the time merely as a viewer.
+            <br> <br>
+            With this inspiration, I came up with the idea of Hashtag Factory. In this model, the audience could actually see and experience how the hashtag receives social media’s individuals’ responses and produces a final outcome – the public sentiment. The audience could witness this process through a tiny viewfinder and a mini-telescope, and the scene is very close to the audience since it is happening everywhere. But the audience could not get access to the inner space, that they cannot make any changes to it.
+            <img src="ani1.png">
+            <img src="ani2.png">
+            <img src="box.png">
+        </p>
+
+    </div>
+
+
+
+    <script>
+        var count = 1;
+
+        function increase() {
+            count++
+            console.log(count)
+        }
+
+        function appear() {
+            var obj1 = document.getElementById("attach1");
+            var obj2 = document.getElementById("attach2");
+            var obj3 = document.getElementById("attach3");
+            var condition = count % 2;
+            if (condition == 0) {
+                obj2.style.display = "none";
+                obj1.style.display = "block";
+                obj3.style.display = "block";
+            }
+            else {
+                obj1.style.display = "none";
+                obj2.style.display = "block";
+            }
+        }
+
+
+    </script>
+</body>
+</html>

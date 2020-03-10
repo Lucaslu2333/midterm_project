@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Hind+Madurai:300,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--didsplay on BIG screen--> 
+    <div class="animation">
+
+        <div class="fbutton">
+            <img onclick="increase(); appear();" class="button" src="animation.png" alt="letter of animation">
+        </div>
+    
+        <p id="attach1">
+            Have you ever fantasized about the future of transportation? Will the future of transportation change our lifestyle? With these questions in mind, I conceived a high-tech society of the future based on modern society. In the future, humans would travel by "light train" to different planets in the solar system, and the way they travel by "light train" is very similar to the way we travel today.
+            <br> <br>
+            In this animation, I conceived and depicted the scene of the three stages of check-in, boarding, and takeoff. The overall style of the animation is relaxed and enjoyable, just as I look forward to the future of travel - exciting and relaxing, no matter where you go.
+        </p>
+
+        <video id="attach2" src="animation.mp4" autoplay muted controls></video>
+    
+    </div>
+
+    <!--didsplay on SMALL screen--> 
+    <div class="manimation">
+
+        <div class="fbutton">
+            <img onclick="increase(); appear();" class="button" src="animation.png" alt="letter of animation">
+        </div>
+    
+        <p id="attach3">
+            Have you ever fantasized about the future of transportation? Will the future of transportation change our lifestyle? With these questions in mind, I conceived a high-tech society of the future based on modern society. In the future, humans would travel by "light train" to different planets in the solar system, and the way they travel by "light train" is very similar to the way we travel today.
+            <br> <br>
+            In this animation, I conceived and depicted the scene of the three stages of check-in, boarding, and takeoff. The overall style of the animation is relaxed and enjoyable, just as I look forward to the future of travel - exciting and relaxing, no matter where you go.
+            <video src="animation.mp4" controls poster="poster.png"></video>
+        </p>
+    
+    </div>
+
+
+
+    <script>
+        var count = 1;
+
+        function increase() {
+            count++
+            console.log(count)
+        }
+
+        function appear() {
+            var obj1 = document.getElementById("attach1");
+            var obj2 = document.getElementById("attach2");
+            var obj3 = document.getElementById("attach3");
+            var condition = count % 2;
+            if (condition == 0) {
+                obj2.style.display = "none";
+                obj1.style.display = "block";
+                obj3.style.display = "block";
+            }
+            else {
+                obj1.style.display = "none";
+                obj2.style.display = "block";
+            }
+        }
+
+
+    </script>
+</body>
+</html>

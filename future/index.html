@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Hind+Madurai:300,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="future">
+
+        <div class="fbutton">
+            <img onclick="increase(); appear();" class="button" src="future.png" alt="letter of about">
+        </div>
+    
+        <p id="attach1">
+            What Could Happen?
+            <br> <br>
+            🤔
+        </p>
+    
+    </div>
+
+
+
+    <script>
+        var count = 1;
+
+        function increase() {
+            count++
+            console.log(count)
+        }
+
+        function appear() {
+            var obj1 = document.getElementById("attach1");
+            if (count == 2) {
+                obj1.style.display = "block";
+            }
+            if (count > 2) {
+                obj1.style.animation = "shake ease-in-out 1.5s";
+            }
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Hind+Madurai:300,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="about">
+
+        <div class="fbutton">
+            <img onclick="increase(); appear();" class="button" src="about.png" alt="letter of about">
+        </div>
+    
+        <p id="attach1">
+            <b>Hi. I'm Zijian Lu.</b>
+            <br><br><br>
+            I grew up in changsha, China, and my native language is Chinese.
+            <br><br>
+            I wanted to show my portfolio by combining my artistic visual style with elements of my native language, so I designed this website.   
+            <br><br>
+            I'm a person who enjoys changes. I expect that both my own life and the environment around me can stay fresh and thriving. I am learning to combine the latest technology and artistic concepts to influence and contribute to our community.
+        </p>
+    
+    </div>
+
+
+
+    <script>
+        var count = 1;
+
+        function increase() {
+            count++
+            console.log(count)
+        }
+
+        function appear() {
+            var obj1 = document.getElementById("attach1");
+            if (count == 2) {
+                obj1.style.display = "block";
+            }
+            if (count > 2) {
+                obj1.style.animation = "shake ease-in-out 0.5s";
+            }
+        }
+
+
+    </script>
+</body>
+</html>
